@@ -11,70 +11,69 @@
 <body>
   <h1>LOS NONAME</h1>
   <pre class="js-operar">
-&lt;<span class="azul">script</span>&gt;
-  <span class="azul">function</span> <span class="ama">operar1</span><span class="amaf">() {</span>
-    <span class="azul">var</span> <span class="celeste">nn</span> = <span class="celeste">document</span>.<span class="ama">getElementById</span><span class="rosa">(</span><span class="nara">"hueco1a"</span><span class="rosa">)</span>.<span class="celeste">value</span>;
+&lt;script&gt;
+  function operar1() { 
+    var nn = document.getElementById("hueco1a").value;
                 
-    <span class="azul">var</span> <span class="celeste">n</span> = parseInt<span class="rosa">(</span><span class="celeste">nn</span>,<span class="verde">10</span><span class="rosa">)</span>;
-    <span class="azul">var</span> <span class="celeste">b2</span> = <span class="celeste">n</span>.toString(2);
-    <span class="azul">var</span> <span class="celeste">b8</span> = <span class="celeste">n</span>.toString(8);
-    <span class="azul">var</span> <span class="celeste">b16</span> = <span class="celeste">n</span>.toString(16);
+    var n = parseInt(nn,10);
+    var b2 = n.toString(2);
+    var b8 = n.toString(8);
+    var b16 = n.toString(16);
                 
-    <span class="celeste">document</span>.getElementById("tab1b").<span class="celeste">innerHTML</span> = <span class="celeste">n</span>;
-    <span class="celeste">document</span>.getElementById("tab2b").<span class="celeste">innerHTML</span> = <span class="celeste">b2</span>;
-    <span class="celeste">document</span>.getElementById("tab3b").<span class="celeste">innerHTML</span> = <span class="celeste">b8</span>;
-    <span class="celeste">document</span>.getElementById("tab4b").<span class="celeste">innerHTML</span> = <span class="celeste">b16</span>;
+    document.getElementById("tab1b").innerHTML = n;
+    document.getElementById("tab2b").innerHTML = b2;
+    document.getElementById("tab3b").innerHTML = b8;
+    document.getElementById("tab4b").innerHTML = b16;
     
-  <stan class="amaf">}</stan> 
-          
-  <span class="azul">function</span> operar2() { 
-    <span class="azul">var</span> <span class="celeste">nn</span> = <span class="celeste">document</span>.getElementById("hueco2a").<span class="celeste">value</span>;
-            
-    <span class="azul">var</span> <span class="celeste">n</span> = parseInt(<span class="celeste">nn</span>,2);
-    <span class="azul">var</span> <span class="celeste">b2</span> = <span class="celeste">n</span>.toString(2);
-    <span class="azul">var</span> <span class="celeste">b10</span> = <span class="celeste">n</span>.toString(10);
-    <span class="azul">var</span> <span class="celeste">b8</span> = <span class="celeste">n</span>.toString(8);
-    <span class="azul">var</span> <span class="celeste">b16</span> = <span class="celeste">n</span>.toString(16);
-                
-    <span class="celeste">document</span>.getElementById("tab1b2").<span class="celeste">innerHTML</span> = <span class="celeste">b2</span>;
-    <span class="celeste">document</span>.getElementById("tab2b2").<span class="celeste">innerHTML</span> = <span class="celeste">b10</span>;
-    <span class="celeste">document</span>.getElementById("tab3b2").<span class="celeste">innerHTML</span> = <span class="celeste">b8</span>;
-    <span class="celeste">document</span>.getElementById("tab4b2").<span class="celeste">innerHTML</span> = <span class="celeste">b16</span>;
   } 
           
-  <span class="azul">function</span> operar3() { 
-    <span class="azul">var</span> <span class="celeste">nn</span> = <span class="celeste">document</span>.getElementById("hueco3a").<span class="celeste">value</span>;
+  function operar2() { 
+    var nn = document.getElementById("hueco2a").value;
+            
+    var n = parseInt(nn,2);
+    var b2 = n.toString(2);
+    var b10 = n.toString(10);
+    var b8 = n.toString(8);
+    var b16 = n.toString(16);
                 
-    <span class="azul">var</span> <span class="celeste">n</span> = parseInt(<span class="celeste">nn</span>,8);
-    <span class="azul">var</span> <span class="celeste">b2</span> = <span class="celeste">n</span>.toString(2);
-    <span class="azul">var</span> <span class="celeste">b10</span> = <span class="celeste">n</span>.toString(10);
-    <span class="azul">var</span> <span class="celeste">b8</span> = <span class="celeste">n</span>.toString(8);
-    <span class="azul">var</span> <span class="celeste">b16</span> = <span class="celeste">n</span>.toString(16);
+    document.getElementById("tab1b2").innerHTML = b2;
+    document.getElementById("tab2b2").innerHTML = b10;
+    document.getElementById("tab3b2").innerHTML = b8;
+    document.getElementById("tab4b2").innerHTML = b16;
+  } 
+          
+  function operar3() { 
+    var nn = document.getElementById("hueco3a").value;
                 
-    <span class="celeste">document</span>.getElementById("tab1b3").<span class="celeste">innerHTML</span> = <span class="celeste">b10</span>;
-    <span class="celeste">document</span>.getElementById("tab2b3").<span class="celeste">innerHTML</span> = <span class="celeste">b2</span>;
-    <span class="celeste">document</span>.getElementById("tab4b3").<span class="celeste">innerHTML</span> = <span class="celeste">b16</span>;
-    <span class="celeste">document</span>.getElementById("tab3b3").<span class="celeste">innerHTML</span> = <span class="celeste">b8</span>;
-    <span class="celeste">document</span>.getElementById("tab4b3").<span class="celeste">innerHTML</span> = <span class="celeste">b16</span>;
+    var n = parseInt(nn,8);
+    var b2 = n.toString(2);
+    var b10 = n.toString(10);
+    var b8 = n.toString(8);
+    var b16 = n.toString(16);
+                
+    document.getElementById("tab1b3").innerHTML = b10;
+    document.getElementById("tab2b3").innerHTML = b2;
+    document.getElementById("tab3b3").innerHTML = b8;
+    document.getElementById("tab4b3").innerHTML = b16;
     
   } 
                  
-  <span class="azul">function</span> operar4() { 
-    <span class="azul">var</span> <span class="celeste">nn</span> = <span class="celeste">document</span>.getElementById("hueco4a").<span class="celeste">value</span>;
+  function operar4() { 
+    var nn = document.getElementById("hueco4a").value;
                 
-    <span class="azul">var</span> <span class="celeste">n</span> = parseInt(<span class="celeste">nn</span>,16);
-    <span class="azul">var</span> <span class="celeste">b2</span> = <span class="celeste">n</span>.toString(2);
-    <span class="azul">var</span> <span class="celeste">b10</span> = <span class="celeste">n</span>.toString(10);
-    <span class="azul">var</span> <span class="celeste">b8</span> = <span class="celeste">n</span>.toString(8);
-    <span class="azul">var</span> <span class="celeste">b16</span> = <span class="celeste">n</span>.toString(16);
+    var n = parseInt(nn,16);
+    var b2 = n.toString(2);
+    var b10 = n.toString(10);
+    var b8 = n.toString(8);
+    var b16 = n.toString(16);
                 
-    <span class="celeste">document</span>.getElementById("tab1b4").<span class="celeste">innerHTML</span> = <span class="celeste">b10</span>;
-    <span class="celeste">document</span>.getElementById("tab2b4").<span class="celeste">innerHTML</span> = <span class="celeste">b2</span>;
-    <span class="celeste">document</span>.getElementById("tab3b4").<span class="celeste">innerHTML</span> = <span class="celeste">b8</span>;
-    <span class="celeste">document</span>.getElementById("tab4b4").<span class="celeste">innerHTML</span> = <span class="celeste">b16</span>;
+    document.getElementById("tab1b4").innerHTML = b10;
+    document.getElementById("tab2b4").innerHTML = b2;
+    document.getElementById("tab3b4").innerHTML = b8;
+    document.getElementById("tab4b4").innerHTML = b16;
     
   }      
-&lt;/<span class="azul">script</span>&gt;
+&lt;/script&gt;
   </pre>
 </body>
 </html>
