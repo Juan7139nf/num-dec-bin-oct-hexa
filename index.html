@@ -12,14 +12,12 @@
           var tablA = document.getElementById(tabla); 
           
           switch(tablA.style.display) { 
-          case "none": 
-          tablA.style.display = "block"; 
+            case "none": 
+              tablA.style.display = "block"; 
           
-          break; 
-          default: 
-          tablA.style.display = "block";
+            default: 
+              tablA.style.display = "block";
           
-          break; 
           } 
         }
     </script>
@@ -27,6 +25,49 @@
 <body>
   <div class="titulo">
     <h1>LOS NONAME</h1>
+  </div>  
+  <div class="cabecera">
+    <h2 align="center">Binario a decimal, octal y hexadecimal</h2>
+  </div>
+  <div class="contenido">
+    <p class="le"><b>Número en base binaria:</b></p>
+    <p align="center">
+      <input step="any" class="inp" type="number" name="hueco2a" autocomplete="off" id="hueco2a" value="1010" style="width: 150px" />
+    </p>	
+    <p align="center">
+      <button class="but" onClick="operar2();mostrar('tabl2')">Calcular</button>
+    </p>
+    <div id="tabl2" style="display: none;">	
+      <table width="auto" align="center" border="1" style="background-color:#00000033;color:#ffffff;" cellspacing="0px" cellpadding="5px">
+        <tbody>
+          <tr>
+            <th scope="col" align="left">Sistema</th>
+            <th scope="col" align="left">Número</th>
+            <th scope="col" align="left">Base</th>
+          </tr>
+          <tr>
+            <th scope="row" align="left">Binario</th>
+            <td align="left"><div id="tab1b2" class="tablaX2"></div></td>
+            <td align="center">2</td>
+          </tr>
+          <tr>
+            <th scope="row" align="left">Decimal</th>
+              <td align="left"><div id="tab2b2" class="tablaX2"></div></td>
+            <td align="center">10</td>
+          </tr>
+          <tr>
+            <th scope="row" align="left">Octal</th>
+            <td align="left"><div id="tab3b2" class="tablaX2"></div></td>
+            <td align="center">8</td>
+          </tr>
+          <tr>
+            <th scope="row" align="left">Hexadecimal</th>
+            <td><div id="tab4b2" class="tablaX2"></div></td>
+            <td align="center">16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="cabecera">
   	<h2 align="center">Decimal a binario, octal y hexadecimal</h2>
@@ -65,49 +106,6 @@
           <tr>
             <th scope="row" align="left">Hexadecimal</th>
             <td><div id="tab4b" class="tablaX2"></div></td>
-            <td align="center">16</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="cabecera">
-    <h2 align="center">Binario a decimal, octal y hexadecimal</h2>
-  </div>
-  <div class="contenido">
-    <p class="le"><b>Número en base binaria:</b></p>
-    <p align="center">
-      <input step="any" class="inp" type="number" name="hueco2a" autocomplete="off" id="hueco2a" value="1010" style="width: 150px" />
-    </p>	
-    <p align="center">
-      <button class="but" onClick="operar2();mostrar('tabl2')">Calcular</button>
-    </p>
-    <div id="tabl2" style="display: none;">	
-      <table width="auto" align="center" border="1" style="background-color:#00000033;color:#ffffff;" cellspacing="0px" cellpadding="5px">
-        <tbody>
-          <tr>
-            <th scope="col" align="left">Sistema</th>
-            <th scope="col" align="left">Número</th>
-            <th scope="col" align="left">Base</th>
-          </tr>
-          <tr>
-            <th scope="row" align="left">Binario</th>
-            <td align="left"><div id="tab1b2" class="tablaX2"></div></td>
-            <td align="center">2</td>
-          </tr>
-          <tr>
-            <th scope="row" align="left">Decimal</th>
-              <td align="left"><div id="tab2b2" class="tablaX2"></div></td>
-            <td align="center">10</td>
-          </tr>
-          <tr>
-            <th scope="row" align="left">Octal</th>
-            <td align="left"><div id="tab3b2" class="tablaX2"></div></td>
-            <td align="center">8</td>
-          </tr>
-          <tr>
-            <th scope="row" align="left">Hexadecimal</th>
-            <td><div id="tab4b2" class="tablaX2"></div></td>
             <td align="center">16</td>
           </tr>
         </tbody>
@@ -194,7 +192,7 @@
           <tr>
             <th scope="row" align="left">Octal</th>
             <td><div id="tab3b4" class="tablaX2"></div></td>
-            <td align="center">16</td>
+            <td align="center">8</td>
           </tr>
         </tbody>
       </table>
@@ -203,7 +201,7 @@
   <script>
       function operar1() { 
         "use strict";
-        var nn = document.getElementById("hueco1a").value; /*n*/
+        var nn = document.getElementById("hueco1a").value;
                     
         var n = parseInt(nn,10);
         var b2 = n.toString(2);
@@ -219,7 +217,7 @@
               
       function operar2() { 
         "use strict";
-        var nn = document.getElementById("hueco2a").value; /*n*/
+        var nn = document.getElementById("hueco2a").value;
                 
         var n = parseInt(nn,2);
         var b2 = n.toString(2);
@@ -235,7 +233,7 @@
               
       function operar3() { 
         "use strict";
-        var nn = document.getElementById("hueco3a").value; /*n*/
+        var nn = document.getElementById("hueco3a").value;
                     
         var n = parseInt(nn,8);
         var b2 = n.toString(2);
@@ -252,7 +250,7 @@
                      
       function operar4() { 
         "use strict";
-        var nn = document.getElementById("hueco4a").value; /*n*/
+        var nn = document.getElementById("hueco4a").value;
                     
         var n = parseInt(nn,16);
         var b2 = n.toString(2);
@@ -267,5 +265,8 @@
         
       }      
   </script>
+  <div class="vercodi">
+      <a href="css/code.html" target="_blank" class="vercode">Código</a>
+  </div>
 </body>
 </html>
