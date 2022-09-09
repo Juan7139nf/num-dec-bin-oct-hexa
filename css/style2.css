@@ -4,16 +4,83 @@ body {
     font-family: 'Acme', sans-serif;
     font-family: 'Roboto Mono', monospace;
     background: #1a1a1a;
-    color: #ffffff;
+    color: #00ffff;
 }
 
 h1 {
     color: #000000;
     font-size: 70px;
-    text-align: center;
     -webkit-text-stroke: 3px #ffffff;
+    text-align: center;
+}
+
+h2 {
+    color: #000000;
+    font-size: 50px;
+    text-align: left;
+    -webkit-text-stroke: 2px #ff0000;
+    padding: 0px 25px;
+    text-align: center;
 }
 
 pre {
     font-size: 18px;
+}
+
+p {
+    color: #ffffff;
+    padding: 0px 30px;
+    font-size: 20px;
+    align-content: center;
+}
+
+b {
+    color: #ff0000;
+}
+
+div {
+    align-content: center;
+    text-align: center;
+}
+
+input {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 35px;
+}
+
+button {
+	background-color: #ffae00;
+	color: #000000;
+	font-size: 40px;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+span {
+    font-size: 35px;
+}
+
+.codigotext {
+    text-align: left;
+}
+
+.t1 {
+    font-size: 25px;
+}
+
+.rosa {
+    color: #ff00ff;
+}
+
+.c1 {
+    color: #eeff00;
+}
+
+.c2 {
+    color: #00c3ff;
+}
+
+.c3 {
+    color: #00ff15;
 }

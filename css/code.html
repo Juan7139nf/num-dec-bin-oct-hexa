@@ -10,6 +10,7 @@
 </head>
 <body>
   <h1>LOS NONAME</h1>
+  <h2>El código que se uso</h2>
   <pre class="js-operar">
 &lt;script&gt;
   function operar1() { 
@@ -75,5 +76,233 @@
   }      
 &lt;/script&gt;
   </pre>
+  <h2>NaN</h2>
+  <p>Por su parte, el valor <b>NaN</b> en JavaScript nos aparece como resultado de una acción cuando hemos realizado una operación aritmética con <b>un valor undefined</b>. Es decir, aparece cuando hemos insertado una operación que debería tener como resultado un número, pero que se ha hecho con un valor indefinido.</p>
+  <h2>Inicio así</h2>
+  <p>Decimal a binario</p>
+  <div>
+    <input type="number" value="70" autocomplete="off" id="hueco1"><br>
+    <button onclick="calcula1()">Convertir</button><br>
+    <span id="llenar1"></span>
+    <script>
+      function calcula1() {
+        var nn = document.getElementById("hueco1").value;
+        var num = nn;
+        var l = 0;
+        var a = 0;
+        var b = 0;
+        var dig = 0;
+        var cif = 0;
+        if (num%2==0) {
+					l = 1;
+				}
+				while (num>0) {
+					a = num%2;
+					num = Math.trunc(num/2);
+					b = (b*10)+a;
+				}
+				while (b>0) {
+					dig = b%10;
+					b = Math.trunc(b/10);
+					cif = (cif*10)+dig;
+				}
+				if (l==1) {
+					cif = cif*10;
+				}
+        document.getElementById("llenar1").innerHTML = cif;
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;script&gt;
+        function calcula1() {
+          var nn = document.getElementById("hueco1").value;
+
+          var num = nn;
+          var l = 0;
+          var a = 0;
+          var b = 0;
+          var dig = 0;
+          var cif = 0;
+
+          if (num%2==0) {
+            l = 1;
+          }
+          while (num>0) {
+            a = num%2;
+            num = Math.trunc(num/2);
+            b = (b*10)+a;
+          }
+          while (b>0) {
+            dig = b%10;
+            b = Math.trunc(b/10);
+            cif = (cif*10)+dig;
+          }
+          if (l==1) {
+            cif = cif*10;
+          }
+          document.getElementById("llenar1").innerHTML = cif;
+        }
+      &lt;/script&gt;
+    </pre>
+  </div>
+  <p>Binario a decimal</p>
+  <div>
+    <input type="number" value="10011010" autocomplete="off" id="hueco2"><br>
+    <button onclick="calcula2()">Convertir</button><br>
+    <span id="llenar2"></span>
+    <script>
+      function calcula2() {
+        var nn = document.getElementById("hueco2").value;
+        var num = nn;
+        var a = 0;
+        var cif = 0;
+        var dig = 0;
+        var co = 0;
+        while (num>0) {
+					a = num%10;
+					num = Math.trunc(num/10);
+					dig = (Math.pow((2),co))*a;
+					cif = cif+dig;
+					co = co+1;
+				}
+        document.getElementById("llenar2").innerHTML = cif;
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;script&gt;
+        function calcula2() {
+          var nn = document.getElementById("hueco2").value;
+          var num = nn;
+          var a = 0;
+          var cif = 0;
+          var dig = 0;
+          var co = 0;
+          while (num>0) {
+            a = num%10;
+            num = Math.trunc(num/10);
+            dig = (Math.pow((2),co))*a;
+            cif = cif+dig;
+            co = co+1;
+          }
+          document.getElementById("llenar2").innerHTML = cif;
+        }
+      &gt;/script&lt;
+    </pre>
+  </div>
+  <p>Decimal a binario resumido</p>
+  <div>
+    <input type="number" value="70" autocomplete="off" id="hueco3"><br>
+    <button onclick="calcula3()">Convertir</button><br>
+    <span id="llenar3"></span>
+    <script>
+      function calcula3() {
+        var nn = document.getElementById("hueco3").value;
+
+        var n = parseInt(nn,10);
+        var n1 = n.toString(2);
+
+        document.getElementById("llenar3").innerHTML = n1;
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;script&gt;
+        function calcula3() {
+          var nn = document.getElementById("hueco3").value;
+  
+          var n = parseInt(nn,10);
+          var n1 = n.toString(2);
+  
+          document.getElementById("llenar3").innerHTML = n1;
+        }
+      &lt;/script&gt;
+    </pre>
+  </div>
+  <p>Binario a decimal resumido</p>
+  <div>
+    <input type="number" value="10011010" autocomplete="off" id="hueco4"><br>
+    <button onclick="calcula4()">Convertir</button><br>
+    <span id="llenar4"></span>
+    <script>
+      function calcula4() {
+        var nn = document.getElementById("hueco4").value;
+
+        var n = parseInt(nn,2);
+
+        document.getElementById("llenar4").innerHTML = n;
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;script&gt;
+        function calcula4() {
+          var nn = document.getElementById("hueco4").value;
+  
+          var n = parseInt(nn,2);
+  
+          document.getElementById("llenar4").innerHTML = n;
+        }
+      &lt;/script&gt;
+    </pre>
+  </div>
+  <h2>El código funciona</h2>
+  <p>Hexadecimal a binario, octal y hexadecimal</p>
+  <div>
+    <input type="text" value="ff00e" autocomplete="off" id="hueco5"><br>
+    <button onclick="calcula5()">Convertir</button><br>
+    <span id="llenar5"></span><p>(16)</p>
+    <span id="llenar6"></span><p>(2)</p>
+    <span id="llenar7"></span><p>(8)</p>
+    <span id="llenar8"></span><p>(10)</p>
+    <script>
+      function calcula5() {
+        var nn = document.getElementById("hueco5").value;
+
+        var n = parseInt(nn,16);
+        var n1 = n.toString(16);
+        var n2 = n.toString(2);
+        var n3 = n.toString(8);
+        var n4 = n.toString(10);
+
+        document.getElementById("llenar5").innerHTML = n1;
+        document.getElementById("llenar6").innerHTML = n2;
+        document.getElementById("llenar7").innerHTML = n3;
+        document.getElementById("llenar8").innerHTML = n4;
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;script&gt;
+        function calcula5() {
+          var nn = document.getElementById("hueco5").value;
+  
+          var n = parseInt(nn,16);
+          var n1 = n.toString(16);
+          var n2 = n.toString(2);
+          var n3 = n.toString(8);
+          var n4 = n.toString(10);
+  
+          document.getElementById("llenar5").innerHTML = n1;
+          document.getElementById("llenar6").innerHTML = n2;
+          document.getElementById("llenar7").innerHTML = n3;
+          document.getElementById("llenar8").innerHTML = n4;
+        }
+      &lt;/script&gt;
+    </pre>
+    <p>Esto en <b>HTML</b> tiene interacción con JavaScript</p>
+    <pre class="codigotext">
+      &lt;input type="text" value="ff00e" id="hueco5"&gt;
+      &lt;button onclick="calcula5()"&gt;Convertir&lt;/button&gt;
+      &lt;span id="llenar5"&gt;&lt;/span&gt;&lt;p&gt;(16)&lt;/p&gt;
+      &lt;span id="llenar6"&gt;&lt;/span&gt;&lt;p&gt;(2)&lt;/p&gt;
+      &lt;span id="llenar7"&gt;&lt;/span&gt;&lt;p&gt;(8)&lt;/p&gt;
+      &lt;span id="llenar8"&gt;&lt;/span&gt;&lt;p&gt;(10)&lt;/p&gt;
+    </pre>
+  </div>
+  <h2>parseInt</h2>
+  <p class="t1"><b class="c1">parseInt</b><b class="rosa">(</b><b class="c2">string</b>, <b class="c3">base</b><b class="rosa">)</b>;</p>
+  <p class="t1"><b class="c2">string</b><br>Una cadena que representa el valor que se desea convertir.</p>
+  <p class="t1"><b class="c3">base</b><br>Un entero que representa la base de la mencionada cadena.</p>
+  <p class="t1"><b class="c1">parseInt</b> es una función de alto nivel y no está asociada a ningún objeto.<br>La función <b class="c1">parseInt</b> comprueba el primer argumento, una cadena, e intenta devolver un entero de la base especificada. Por ejemplo, una base de 10 indica una conversión a número decimal, 8 octal, 16 hexadecimal, y así sucesivamente. Para bases superiores a 10, las letras del alfabeto indican numerales mayores que 9. Por ejemplo, para números hexadecimales (base 16), se utiliza de la A hasta la F.</p>
+  <h2>toString</h2>
+  <p class="t1"><b class="c2">number</b>.<b class="c1">toString</b><b class="rosa">(</b><b class="c3">base</b><b class="rosa">)</b></p> 
+  <p class="t1">El método <b class="c1">toString</b> comprueba su primer argumento, e intenta devolver una cadena de representación en la base especificada. Para bases superiores a 10, las letras del alfabeto indican numerales mayores de 9. Por ejemplo, para números hexadecimales (base 16), se utiliza de A hasta F.<br>Si no se especifica la base, JavaScript asume la base predefinida, que es 10.</p>
 </body>
 </html>
