@@ -304,5 +304,139 @@
   <h2>toString</h2>
   <p class="t1"><b class="c2">number</b>.<b class="c1">toString</b><b class="rosa">(</b><b class="c3">base</b><b class="rosa">)</b></p> 
   <p class="t1">El método <b class="c1">toString</b> comprueba su primer argumento, e intenta devolver una cadena de representación en la base especificada. Para bases superiores a 10, las letras del alfabeto indican numerales mayores de 9. Por ejemplo, para números hexadecimales (base 16), se utiliza de A hasta F.<br>Si no se especifica la base, JavaScript asume la base predefinida, que es 10.</p>
+  <div>
+    <button onclick="mostar()">Mostar imagen</button>
+    <div id="imaggen" style="display: none;">
+      <img src="../css/Cartoon-Bender-PNG.png" alt=""><br>
+      <button onclick="ocultar()">Ocultar imagen</button>
+    </div>
+    <script>
+      function mostar() {
+        document.getElementById("imaggen").style.display = "block";
+      }
+
+      function ocultar() {
+        document.getElementById("imaggen").style.display = "none";
+      }
+      </script>
+    <pre class="codigotext">
+      &lt;button onclick="mostar()"&gt;Mostar imagen&lt;/button&gt;
+      &lt;div id="imaggen" style="display: none;"&gt;
+        &lt;img src="../css/Cartoon-Bender-PNG.png" alt=""&gt;&lt;br&gt;
+        &lt;button onclick="ocultar()"&gt;Ocultar imagen&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+        function mostar() {
+          document.getElementById("imaggen").style.display = "block";
+        }
+      
+        function ocultar() {
+          document.getElementById("imaggen").style.display = "none";
+        }
+      &lt;/script&gt;
+    </pre>
+  </div>
+  <div>
+    <button onclick="mostrar1()">Tabla</button>
+    <div id="tabla" style="display: none;">
+      <table width="auto" align="center" border="1" style="background-color:#00000033;color:#ffffff;" cellspacing="0px" cellpadding="5px">
+        <tbody>
+          <tr>
+            <th>letra</th>
+            <th>número</th>
+          </tr>
+          <tr>
+            <th>A</th>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th>B</th>
+            <td>11</td>
+          </tr>
+          <tr>
+            <th>C</th>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th>D</th>
+            <td>13</td>
+          </tr>
+          <tr>
+            <th>E</th>
+            <td>14</td>
+          </tr>
+          <tr>
+            <th>F</th>
+            <td>15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function mostrar1() {
+        var tablA = document.getElementById("tabla");
+
+        switch(tablA.style.display) { 
+          case "none": 
+            tablA.style.display = "block"; 
+        
+          default: 
+            tablA.style.display = "block";
+        
+        }
+      }
+    </script>
+    <pre class="codigotext">
+      &lt;button onclick="mostrar1()"&gt;Tabla&lt;/button&gt;
+      &lt;div id="tabla" style="display: none;"&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th&gt;letra&lt;/th&gt;
+              &lt;th&gt;número&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;A&lt;/th&gt;
+              &lt;td&gt;10&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;B&lt;/th&gt;
+              &lt;td&gt;11&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;C&lt;/th&gt;
+              &lt;td&gt;12&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;D&lt;/th&gt;
+              &lt;td&gt;13&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;E&lt;/th&gt;
+              &lt;td&gt;14&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;F&lt;/th&gt;
+              &lt;td&gt;15&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+        function mostrar1() {
+          var tablA = document.getElementById("tabla");
+
+          switch(tablA.style.display) { 
+            case "none": 
+              tablA.style.display = "block"; 
+          
+            default: 
+              tablA.style.display = "block";
+          
+          }
+        }
+      &lt;/script&gt;
+    </pre>
+  </div>
 </body>
 </html>
